@@ -23,6 +23,17 @@
             padding: 20px;
         }
 
+        .hero-image {
+            width: 100%;
+            height: 300px;
+            background-image: url('./foto.png');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(2, 102, 112, 0.3);
+        }
+
         header {
             text-align: center;
             background: linear-gradient(45deg, #026670, #9FEDD7);
@@ -237,30 +248,7 @@
             transform: scale(1.05);
         }
 
-        .hero-image {
-            width: 100%;
-            max-width: 800px;
-            height: 300px;
-            margin: 20px auto;
-            background: url('./foto.png');
-            background-size: cover;
-            background-position: center;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(2, 102, 112, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(2, 102, 112, 0.2) 0%, rgba(159, 237, 215, 0.2) 100%);
-            border-radius: 15px;
-        }
+        @media (max-width: 768px) {
             .tabs {
                 flex-direction: column;
             }
@@ -281,12 +269,12 @@
 </head>
 <body>
     <div class="container">
+        <div class="hero-image"></div>
+        
         <header>
             <h1>🔬 Crimen en la Fábrica: El Elemento Sospechoso</h1>
             <p class="slogan">Descubre quién fue... y qué elemento lo delata</p>
         </header>
-
-        <div class="hero-image"></div>
 
         <div class="tabs">
             <button class="tab active" onclick="openTab(event, 'intro')">📋 Introducción</button>
